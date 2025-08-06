@@ -30,8 +30,8 @@ def get_offset_from_counter(counter):
 def compute_target_pixel(shape, board_origin, cell_size, place_row, place_col):
     shape_row, shape_col = len(shape), len(shape[0])
 
-    shape_final_width = (shape_col * cell_size + (shape_col - 1) * 15) / 2 + (5 - shape_col) * 5
-    shape_final_height = (shape_row + 1) * cell_size + shape_row * 15 + (5 - shape_row) * 5 if shape_row < 4 else (shape_row + 0.5) * cell_size + shape_row * 15
+    shape_final_width = (shape_col * cell_size + (shape_col - 1) * 15) / 2 + (5 - shape_col) * 2
+    shape_final_height = (shape_row + 1) * cell_size + shape_row * 15 + (5 - shape_row) * 2 if shape_row < 4 else (shape_row + 0.5) * cell_size + shape_row * 15
 
     board_target_x = board_origin[0] + place_col * cell_size + place_col
     board_target_y = board_origin[1] + place_row * cell_size + place_row
